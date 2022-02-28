@@ -152,3 +152,16 @@ Today's Progress: Built out backend on Django  - created models and seeded data 
 ## Feb 21 - 25, 2022
 
 Progress: Re-did portfolio application. Made signficant changes to my portfolio. Learned new concepts in react and how to utilize react-scroll. Gained extensive knowledge on CSS.
+
+## Feb 28, 2022
+Progress: Learned how to create full CRUD back-end with Ruby. Did code-wars 
+
+Turned a boolean into a string. Doing easier challenges to remain consistent with javascript. 
+```
+function booleanToString(b){
+  return b ? 'true' : 'false';
+}
+```
+
+Today: 
+I am working on animations for my portfolio and looking into a new project to do. 
