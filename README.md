@@ -1,0 +1,2 @@
+# 100 Code Every Day Challenge
+I recently just started doing the 100 day code-challenge. I'm hoping to keep coding everyday after the 100 day! Tackling python, javascript challenges while learning CSS and building new projects everyday! 
