@@ -148,3 +148,7 @@ Today I will be focused on leet-code, cleaning up my portfolio website and watch
 
 ## Feb 10-18, 2022  
 Today's Progress: Built out backend on Django  - created models and seeded data on Django admin panel  20% through Angular course on Udemy  - began writing Typescript code - created an Angular app - created components through CLI and in IDE - used HTTP request to pull from our heroku database - property/event binding to pass variables was very rocky, so transitioned back over to React  Built out React app in 2 days  - styled using Material UI, Bootstrap, Animate.css - user authentication is functional, components will display conditionally when user is logged in - user curated data is sent to the database and stored to the API - all components are linked and traverses through the site - error checks are complete, need to add a demo user button and auto refresh page when drinks/comments are added  Thoughts: Hardest week of the course -- creating a Django backend took us about a day and then dove headfirst into learning Angular. 
+
+## Feb 21 - 25, 2022
+
+Progress: Re-did portfolio application. Made signficant changes to my portfolio. Learned new concepts in react and how to utilize react-scroll. Gained extensive knowledge on CSS.
