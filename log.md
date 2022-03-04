@@ -165,3 +165,20 @@ function booleanToString(b){
 
 Today: 
 I am working on animations for my portfolio and looking into a new project to do. 
+
+## March 4th, 2022
+Progress: 
+Today I did a couple of code-wars to refresh my brain on JavaScript. They were pretty easy as I had to create an array and loop through the arguments. I ended up doing it in three tries.
+
+```
+function countBy(x, n) {
+    var z = [];
+    for (i = 1; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+```
+
+Today: 
+I am working on my photography portfolio.
