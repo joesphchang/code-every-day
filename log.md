@@ -182,3 +182,102 @@ function countBy(x, n) {
 
 Today: 
 I am working on my photography portfolio.
+
+## July 21st, 2022
+
+Progress:
+Today I'm taking the time to learn data structures and algorithm. With today's time on learning DS/A is very impoortant when handling data. Whether its traversing through it, adding to it, or deleting somthing out of it. You have to understand how data can be worked with. I've tackled Node nad LinkedList so far on CodeAcademy. Below I will post a snippet of each code block I have created throughout the course so far. My main goal with DS/A is to get familiar with algorithms and be better at explaining and figuring out which method is perfect for a challenged problem. 
+
+I'm not yet ready to tackle leet-codes and I am far from ready to do anything tough when it comes to Technical Interviews. I have skills to create applications and make things work, but when it comes to complex problem. It is one of my biggest weakness as a programer. 
+
+My goal for the mid-year is to be proficient enough to tackle medium-level problems and solve them within a 45 minute time-frame. 
+
+Node
+```
+class Node {
+  constructor(data) {
+    // Sets the node to data
+    this.data = data;
+    // IF no node is after the next block, it ends up being null.
+    this.next = null;
+  }
+    // Sets the next node. 
+  setNextNode(node) 
+    // Checks if the node is a instance of the node class
+    // If the argument isa Node or null, it will set this.next to node
+    if (node instanceof Node || node === null) {
+     this.next = node;   
+    } else {
+        // Will throw error if it isn't.
+        throw new Error('Not a string!')
+    }
+  }
+    getNextNode() {
+    return this.next;
+  }
+}
+
+// Creates a new node with a value
+const firstNode = new Node('I am an instance of a Node!');
+// Creates a second node with a new value
+const secondNode = new Node('Im the second node!')
+
+// Links firstNode to secondNode
+firstNode.setNextNode(secondNode);
+console.log(firstNode)
+console.log(firstNode.getNextNode())
+
+module.exports = Node;
+```
+
+Linked List
+```
+const Node = require('./Node');
+
+class LinkedList {
+  
+  constructor() {
+    this.head = null;
+  }
+
+  addToHead(data) {
+    const newHead = new Node(data);
+    const currentHead = this.head;
+    this.head = newHead;
+    if (currentHead) {
+      this.head.setNextNode(currentHead);
+    }
+  }
+  addToTail(data) {
+    let tail = this.head;
+    if (!tail) {
+      this.head = new Node(data)
+    } else {
+      while (tail.getNextNode() !== null) {
+        tail = tail.getNextNode();
+      }
+      tail.setNextNode(new Node(data))
+    }
+  }
+	removeHead() {
+    const removedHead = this.head;
+    if (!removedHead) {
+      return removeHead();
+    }
+    this.head = removedHead.getNextNode();
+    return removedHead.data;
+  }
+	printList() {
+    let currentNode = this.head;
+    let output = '<head> '
+    while (currentNode !== null) {
+      output += currentNode.data + ' ';
+      currentNode = currentNode.getNextNode();
+    } 
+    output += '<tail>'
+    console.log(output)
+  }
+}
+
+module.exports = LinkedList;
+```
