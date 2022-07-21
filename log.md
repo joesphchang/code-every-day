@@ -281,3 +281,32 @@ class LinkedList {
 
 module.exports = LinkedList;
 ```
+
+A coding challenge that I was given at CodeAcademy.
+```
+const LinkedList = require('./LinkedList');
+const testLinkedList = require('./testLinkedList.js');
+// Complete this function
+const nthLastNode = ( linkedList, n) => {
+  let current = null
+  tailPointer = linkedList.head;
+  count = 0;
+  while(tailPointer) {
+    tailPointer = tailPointer.next
+    if (count >= n) {
+      if (!current) {
+        current = linkedList.head;
+      }
+      current = current.next;
+    } 
+    count++;
+  }
+  return current;
+}
+
+// Test your function yourself:
+console.log(nthLastNode(testLinkedList, 4));
+
+// Leave this so that we can test your code:
+module.exports = nthLastNode;
+```
