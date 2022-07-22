@@ -310,3 +310,42 @@ console.log(nthLastNode(testLinkedList, 4));
 // Leave this so that we can test your code:
 module.exports = nthLastNode;
 ```
+
+## July 22nd, 2022
+Progress:
+Today I am learning about Queues and Stacks on CodeAcademy. Also, I recently bought a uDemy course on Data Structures and Algorithms. For my ultra-learning experience, this is the main topic I plan on tackling to understand DS/A takes amount of time and effort. Most importantly practice and repetition. At the end of each lesson, I'm usually given problems to solve that are similar problems that you would see on Leetcode. It is always great practice to test yourself and see if you can ace it in the hole. 
+
+Going through Queues was rough. I had a hard-time trying to focus and recognize the patterns that was given to me. I think Queues are something I need to look at over again. 
+
+```
+class Stack {
+  constructor(maxSize = Infinity) {
+    this.stack = new LinkedList();
+    this.size = 0;
+    this.maxSize = maxSize;
+  }
+
+  push(value) {
+    this.stack.addToHead(value);
+  }
+
+  pop() {
+    if (this.size > 0) {
+    const value = this.stack.removeHead();
+    this.size --;
+    return value;
+    }  else {
+      console.log('Stack is empty.')
+    }
+  }
+
+  peek() {
+    if (this.size > 0) {
+      return this.stack.head.data;
+    } else {
+      return null;
+    }
+  }
+
+}
+```
