@@ -377,3 +377,37 @@ var twoSum = function(nums, target) {
     return [];
 };
 ```
+
+## July 25th, 2022
+Progress:
+Today I'm doing a Leet code challange 'Valid Anagram' where it checks if a word has repeating letters to another word. I start to realize that when solving Array Code Challenge, HashMaps are mainly utilzie to solve these challenges. A hashmap is utilize to surface whether or not the same letters/numbers will show up. Its a great way to sort through an array to figure out certain problems.
+
+Here's the code
+
+```
+  var isAnagram = function(s, t) {
+    if (s.length !== t.length) {
+        return false;
+    }
+    let sMap = {};
+    let tMap = {};
+    for (let i = 0; i < s.length; i++) {
+        if (sMap.hasOwnProperty(s[i])) {
+            sMap[s[i]]++;
+        } else {
+            sMap[s[i]] = 1;
+        }
+        if (tMap.hasOwnProperty(t[i])) {
+            tMap[t[i]]++;
+        } else {
+            tMap[t[i]] = 1;
+        }
+    }
+    for (let k in sMap) {
+        if (sMap[k] !== tMap[k]) {
+            return false;
+        }
+    }
+    return true;
+};
+```
