@@ -382,6 +382,16 @@ var twoSum = function(nums, target) {
 Progress:
 Today I'm doing a Leet code challange 'Valid Anagram' where it checks if a word has repeating letters to another word. I start to realize that when solving Array Code Challenge, HashMaps are mainly utilzie to solve these challenges. A hashmap is utilize to surface whether or not the same letters/numbers will show up. Its a great way to sort through an array to figure out certain problems.
 
+## Key tips on Hash Tables / Hash Maps
+```
+declare hashCode variable with value of 0
+
+for each character in the key
+  add the sum of the current character code value and hashCode to hashCode
+
+return hashCode
+```
+
 Here's the code
 
 ```
