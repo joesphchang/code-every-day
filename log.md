@@ -421,3 +421,40 @@ Here's the code
     return true;
 };
 ```
+
+## July 29th, 2022
+Missed a couple days due to a coding challenge that I didnt successfully do well in. I'm happy I tried and tackled it. I totally forgot to turn it in, so I'm a little embarassed by that notion. I now know why I'm a front-end developer and not a full-stack engineer. I love coding, but I also like creating websites and maintaining them. 
+
+Today I'm following a LeetCode 101: The 14 Patterns Introduction where a man named Vinz Angelo Madrigal is going through a powerpoint on 14 different patterns. He touches up on Sliding Window and walks through a challenge that utilizes it. 
+
+Here's the code I got from working alongside with him and it worked.
+
+```
+var numOfSubarrays = function(arr, k, threshold) {
+    // Find the sum of the first k ints
+    let sum = 0;
+    // Add to counter if the average of sum over k is equal to or greater than the threshold
+    for ( let i = 0; i < k; i++) {
+        sum += arr[i];
+    }
+    let average = sum / k;
+    let counter = 0;
+    if (average >= threshold) {
+        counter++;
+    }
+    // For the rest of array
+    for (let j = k; j < arr.length; j++) {
+        // slide window up by one element
+        sum -= arr[j - k];
+        sum += arr[j];
+        // Calculate the average of these k elements
+        let currAverage = sum / k;
+        // If the k element's average is greater than the threshold 
+        if (currAverage >= threshold) {
+            counter++;
+        }
+    }
+    // Return counter
+    return counter++;
+};
+```
