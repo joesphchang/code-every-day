@@ -458,3 +458,6 @@ var numOfSubarrays = function(arr, k, threshold) {
     return counter++;
 };
 ```
+
+## August 4th, 2022
+Had a long vacation but coming back to doing hashmaps and a udemy course on DS and Algos. 
